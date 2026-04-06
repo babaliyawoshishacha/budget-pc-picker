@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Used Price Checker | Budget PC Picker</title>
+    <meta name="description" content="Check indicative used price trends for popular PC components." />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="used-page">
+    <header>
+        <div class="wrap nav">
+            <a class="brand" href="index.html">
+                <span>Budget PC Picker</span>
+            </a>
+
+            <nav class="navlinks" aria-label="Primary">
+                <a href="index.html">Home</a>
+                <a href="budget-picker.html">Budget Picker</a>
+                <a href="used-price.html" aria-current="page">Used Price Checker</a>
+                <a href="references.html">References</a>
+            </nav>
+
+            
+        </div>
+    </header>
+
+    <main class="wrap">
+        <section class="page-hero apple-hero reveal-up">
+            <h1 class="reveal-up delay-1">
+                <span class="word-picker">Used</span>
+                <span class="word-budget">Price Checker</span>
+            </h1>
+
+            <p>
+                Two quick entry routes: search by exact model, or enter a target budget.
+                The chart visualises a six-month demo trend to support depreciation-aware choices.
+            </p>
+        </section>
+
+        <section class="grid used-grid">
+            <!-- LEFT -->
+            <article class="card reveal-up reveal-left" style="grid-column: span 5;">
+                <h2>Search Used Components</h2>
+
+                <form id="usedModelForm" class="used-form-block">
+                    <label>
+                        <span class="tag">Model name（RTX_30/40）</span>
+                        <input type="text"
+                               id="usedModelInput"
+                               name="model"
+                               placeholder="e.g., RTX 2080TI / RTX 3060 / RTX 3070"
+                               autocomplete="off" />
+                    </label>
+                    <button class="btn btn-primary" type="submit">Generate 6-Month Chart</button>
+                </form>
+
+                <div class="used-divider">
+                    <span>or</span>
+                </div>
+
+                <form id="usedPriceForm" class="used-form-block">
+                    <label>
+                        <span class="tag">Target budget (£)</span>
+                        <input type="number"
+                               id="usedPriceInput"
+                               name="price"
+                               min="20"
+                               max="5000"
+                               step="5"
+                               placeholder="e.g., 350" />
+                    </label>
+                    <button class="btn btn-secondary" type="submit">Find Closest Model &amp; Chart</button>
+                </form>
+
+            </article>
+
+            <!-- RIGHT -->
+            <article class="card chart-panel reveal-up reveal-right delay-1 id="chartWrapper" style="grid-column: span 7;">
+                <div id="last6Scribble" class="last6-scribble" aria-hidden="true">Last 6 Month</div>
+
+                <div id="chartWrapper" class="chart-wrapper" hidden>
+                    <h3 id="chartTitle" class="chart-title"></h3>
+
+                <!-- ✅ 新增这一层，id 要和 JS 对上 -->
+                     <div id="chartCanvasWrap" class="chart-canvas-wrap">
+                        <canvas id="priceChart"></canvas>
+                     </div>
+                </div>
+
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <br /><br /><br />
+        <div class="wrap">
+            © <span id="year"></span> · INST0007
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

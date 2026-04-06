@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>References | Budget PC Picker</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="references-page">
+    <!-- Fixed nav (same as your other pages) -->
+    <header>
+        <div class="wrap nav">
+            <a class="brand" href="index.html">
+                <span>Budget PC Picker</span>
+            </a>
+
+            <nav class="navlinks" aria-label="Primary">
+                <a href="index.html">Home</a>
+                <a href="budget-picker.html">Budget Picker</a>
+                <a href="used-price.html">Used Price Checker</a>
+                <a href="references.html" aria-current="page">References</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="wrap">
+        <section class="page-hero apple-hero">
+            <h1>
+                References
+            </h1>
+            <p>
+                This page documents the supporting sources, datasets, and tools used to build this prototype,
+                and acknowledges third-party contributions that informed the design and implementation.
+            </p>
+        </section>
+
+        <section class="grid">
+            <article class="card" style="grid-column: span 12;">
+                <h2>Data Sources</h2>
+                <ul class="refs-list">
+                    <li>
+                        <strong>Bilibili creator data (芝士华莱士)</strong> – Used as a benchmark inspiration for
+                        indicative price references and component-market context. This project uses the information
+                        for learning and interface prototyping purposes only.
+                    </li>
+                    <li>
+                        <strong>Self-curated teaching dataset</strong> – A simplified, non-commercial dataset created
+                        for the INST0007 prototype demonstration. It does not represent real-time market scraping.
+                    </li>
+                </ul>
+            </article>
+
+            <article class="card" style="grid-column: span 12;">
+                <h2>Tools &amp; Assistance</h2>
+                <ul class="refs-list">
+                    <li>
+                        <strong>ChatGPT</strong> – Supported the early-stage layout planning, helped refine text
+                        for a consistent professional tone, and assisted with debugging CSS/JS behaviours
+                        (e.g., layout alignment, reveal timing, and responsive adjustments). The final structure,
+                        decisions, and integration were reviewed and implemented by the author.
+                    </li>
+                </ul>
+            </article>
+
+            <article class="card" style="grid-column: span 12;">
+                <h2>Academic Context</h2>
+                <p>
+                    This website is a coursework prototype for <strong>INST0007</strong>. All data and interface
+                    elements are used in an educational context. The design prioritises clarity, usability,
+                    and responsible interpretation of indicative pricing rather than claiming market accuracy.
+                </p>
+            </article>
+
+            <article class="card" style="grid-column: span 12;">
+                <h2>Notes on Responsible Use</h2>
+                <p>
+                    The budget and used-price outputs are intended to reduce decision friction and demonstrate
+                    web interaction patterns. Users should verify current pricing, compatibility, and regional
+                    availability through official retailers or trusted marketplaces before making purchase decisions.
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <br /><br />
+        <div class="wrap">
+            © <span id="year"></span> · INST0007
+        </div>
+    </footer>
+
+    <!-- If your theme toggle lives in main.js, keep it -->
+    <script src="js/main.js"></script>
+</body>
+</html>

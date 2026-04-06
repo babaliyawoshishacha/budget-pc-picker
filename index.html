@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home | Budget PC Picker</title>
+    <meta name="description" content="Get PC hardware recommendations by budget, with an optional used price reference checker." />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <header>
+        <div class="wrap nav">
+            <a class="brand" href="index.html">
+                <span>Budget PC Picker</span>
+            </a>
+
+            <nav class="navlinks" aria-label="Primary">
+                <a href="index.html" aria-current="page">Home</a>
+                <a href="budget-picker.html">Budget Picker</a>
+                <a href="used-price.html">Used Price Checker</a>
+                <a href="references.html">References</a>
+            </nav>
+
+    </header>
+
+    <!-- Video right under the menu -->
+    <section class="video-hero" id="home-hero">
+        <video class="video-bg"
+               autoplay
+               muted
+               loop
+               playsinline
+               preload="metadata">
+            <source src="media/backvideo.mp4" type="video/mp4" />
+            Your browser does not support video playback.
+        </video>
+
+        <div class="video-overlay"></div>
+
+        <div class="video-content">
+            <div class="wrap">
+                <span class="tag">Budget PC Picker</span>
+                <h1>Your Budget<br />Your Best Build</h1>
+                <p>
+                    Enter your budget to receive curated CPU, GPU, RAM and SSD recommendations—plus indicative used-price insights for value-driven decisions.
+                </p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="budget-picker.html">Start Budget Picking</a>
+                    <a class="btn btn-secondary" href="used-price.html">Check Used Price Reference</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Keep ONLY one main -->
+    <main class="wrap">
+
+        <!-- How It Works block -->
+        <section class="page-hero apple-hero" id="how-it-works">
+            <h1 style="margin-top:10px;">How It Works</h1>
+            <p>
+                Budget is the most reliable starting point for first-time builders.
+                By anchoring recommendations to price tiers, this prototype reduces decision overload and helps users prioritise components where performance matters most.
+            </p>
+
+            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px; justify-content:center;">
+                <!-- 这里这颗按钮会在滚动到本区块时，从紫色平滑变成孔雀绿/草绿渐变 -->
+                <a class="btn btn-primary scroll-reactive" href="budget-picker.html">
+                    <span class="btn-label">Start Budget Picking</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="home-stack" id="features">
+            <article class="card apple-feature reveal-up">
+                <h2>⬢ Reliable, Value-Optimised Builds</h2>
+                <p>
+                    Curated recommendations centred on mainstream tier-one brands, with value-first substitutions where real-world performance is comparable.
+                    Compatibility and build simplicity guide the final picks—so users get balanced, dependable components without overpaying.
+                </p>
+                <div class="tags">
+                    <span class="tag">Tier-one brands</span>
+                    <span class="tag">Smart savings</span>
+                    <span class="tag">Build-ready</span>
+                </div>
+            </article>
+
+            <article class="card apple-feature reveal-up delay-1">
+                <h2>⬢ Depreciation-Aware Used Price Guide</h2>
+                <p>
+                    Consumer electronics depreciate fast. This tool-first, public-interest feature aims to reduce value anxiety by surfacing indicative used-market ranges.
+                    By making second-hand pricing more visible and comparable, we help users identify relatively value-resilient components and make calmer, better-timed purchase or upgrade decisions.
+                </p>
+                <div class="tags">
+                    <span class="tag">Public-interest tool</span>
+                    <span class="tag">Depreciation-aware</span>
+                    <span class="tag">Value-resilient picks</span>
+                </div>
+            </article>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="wrap">
+            © <span id="year"></span> · INST0007
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

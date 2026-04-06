@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Budget Picker | Budget PC Picker</title>
+    <meta name="description" content="Enter your budget to get PC hardware recommendations." />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="budget-page">
+    <header>
+        <div class="wrap nav">
+            <a class="brand" href="index.html">
+                <span>Budget PC Picker</span>
+            </a>
+
+            <nav class="navlinks" aria-label="Primary">
+                <a href="index.html">Home</a>
+                <a href="budget-picker.html" aria-current="page">Budget Picker</a>
+                <a href="used-price.html">Used Price Checker</a>
+                <a href="references.html">References</a>
+            </nav>
+
+    </header>
+
+    <main class="wrap">
+
+        <!-- Hero：标题 + 简介 -->
+        <section class="bp-hero reveal-up">
+            <h1 class="bp-title">
+                <span class="bp-title-budget">Budget</span>
+                <span class="bp-title-picker"> Picker</span>
+            </h1>
+            <p class="bp-lead">
+                Use a single budget input to surface balanced, mainstream-grade hardware recommendations.
+                Compatibility, installation simplicity and everyday stability are treated as first-class
+                constraints, so users can build confidently without overspending.
+            </p>
+        </section>
+
+        <!-- 布局：左表单 + 右品牌 Logo -->
+        <section class="bp-layout reveal-up delay-100">
+
+            <article class="card reveal-up bp-budget-card">
+            <h2>Enter Your Budget</h2>
+            <p class="helper">
+                Input your target spend and select an optional usage profile. The demo will map you to an indicative recommendation tier.
+            </p>
+
+            <div class="bp-form-brands">
+
+                <form id="budgetForm">
+                    <label>
+                        <span class="tag">Budget (£)</span>
+                        <input type="number" id="budgetInput" placeholder="e.g., 800">
+                    </label>
+
+                    <label>
+                        <span class="tag">Use Case (optional)</span>
+                        <select id="useCase">
+                            <option>Balanced</option>
+                            <option>Gaming</option>
+                            <option>Productivity</option>
+                        </select>
+                    </label>
+
+                    <button class="btn btn-primary" type="submit">
+                        Generate Recommendations (Demo)
+                    </button>
+
+                    <p class="fineprint">
+                        This is a guided prototype for INST0007. Outputs are illustrative, not a pricing guarantee.
+                    </p>
+                </form>
+                <!-- Output mini cards (CPU/GPU/SSD/RAM) -->
+                <div class="bp-output-row" id="bpOutputRow">
+                    <div class="bp-mini-card" id="cpuCard">
+                        <span class="bp-mini-label">CPU</span>
+                        <span class="bp-mini-value" id="cpuValue">—</span>
+                    </div>
+
+                    <div class="bp-mini-card" id="gpuCard">
+                        <span class="bp-mini-label">GPU</span>
+                        <span class="bp-mini-value" id="gpuValue">—</span>
+                    </div>
+
+                    <div class="bp-mini-card" id="ssdCard">
+                        <span class="bp-mini-label">SSD</span>
+                        <span class="bp-mini-value" id="ssdValue">—</span>
+                    </div>
+
+                    <div class="bp-mini-card" id="ramCard">
+                        <span class="bp-mini-label">RAM</span>
+                        <span class="bp-mini-value" id="ramValue">—</span>
+                    </div>
+                </div>
+
+                <div class="bp-brand-row brand-scroll-lock">
+
+                    <div class="brand-item">
+                        <img class="brand-logo is-light" src="media/gigabytelight.png" alt="GIGABYTE">
+                        <img class="brand-logo is-dark" src="media/gigabytedark.png" alt="GIGABYTE">
+                    </div>
+
+                    <div class="brand-item">
+                        <img class="brand-logo is-light" src="media/asuslight.png" alt="ASUS">
+                        <img class="brand-logo is-dark" src="media/asusdark.png" alt="ASUS">
+                    </div>
+
+                    <div class="brand-item">
+                        <img class="brand-logo is-light" src="media/msilight.png" alt="MSI">
+                        <img class="brand-logo is-dark" src="media/msidark.png" alt="MSI">
+                    </div>
+
+                    <div class="brand-item">
+                        <img class="brand-logo is-light" src="media/amdlight.png" alt="AMD">
+                        <img class="brand-logo is-dark" src="media/amddark.png" alt="AMD">
+                    </div>
+
+
+                    <div class="brand-item">
+                        <img class="brand-logo is-light" src="media/nvidialight.png" alt="NVIDIA">
+                        <img class="brand-logo is-dark" src="media/nvidiadark.png" alt="NVIDIA">
+                    </div>
+                </div>
+            </article>
+
+
+            </section>
+        <section class="tier-one-bottom reveal-up">
+            <h3>Tier-one brands we prioritise</h3>
+            <p>
+                Recommendations focus on reliable, mainstream-grade partners first, with value-oriented swaps only when performance is genuinely comparable.
+            </p>
+
+            <a id="usedGuideBtn" class="btn btn-secondary" href="used-price.html">
+                View Used Price Guide
+            </a>
+
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+        <div class="wrap">
+            © <span id="year"></span> · INST0007
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
